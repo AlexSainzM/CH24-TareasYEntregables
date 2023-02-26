@@ -1,7 +1,48 @@
-//Crear una función que verifique si un número es par o no 
-// Parametros [Recibe el numero a verificar, devuelve en un String si es par o no]
+/* Crear una función que verifique si un número es par o no.
+Parametros [Recibe el numero a verificar, devuelve en un String si es par o no]
+ */
+console.log("-----Ejercicio funcion es par -------");
+
+const funcEsPar = b => {
+    if ( b % 2 == 0) {
+        console.log(`El número ${b} es par`);
+    } else {
+        console.log(`El número ${b} no es par`);
+    }
+}
+
+funcEsPar(3);
+
+console.log("-----Ejercicio funcion es par (usando return)-------");
+
+const funcEsPar2 = x => {
+    let y ="";
+    if ( x % 2 == 0) {
+        y = `El número ${x} es par`;
+    } else {
+        y = `El número ${x} no es par`;
+    }
+    return y;
+}
+
+console.log(funcEsPar2(3));
 
 /* Crear un programa para verificar la edad de un usuario, debe ser mayor a 18 para un resultado positivo */
+
+console.log("-----Ejercicio Edad de Usuario-------");
+
+const edadUsuario = (a) => {
+    let zy = "";
+    if (a > 18) {
+        zy = `Usuario mayor de edad: ${a} (permitido)`;
+    } else {
+        zy = `Usuario menor de edad: ${a} (prohibido)`;
+    }
+    return zy; 
+}
+
+console.log(edadUsuario(15));
+
 
 /* reto 03 Hora y calendario */
 
@@ -45,24 +86,54 @@ const esLaboral = (diaHabil) => {
 }
 
 
-console.log(esLaboral());
+//console.log(esLaboral());
 
 
 
-// Escribir una funcion que regrese la cantidad de valores true que hay en un array
-/* 
-countTrue([true, false, false, true, false]) ➞ 2
+/* Escribir una funcion que regrese la cantidad de valores true que hay en un array */
 
-countTrue([false, false, false, false]) ➞ 0
+console.log("-----Cantidad de valores true en un array -------");
 
-countTrue([]) ➞ 0
+const arrConTrues = [true, true, true];
+let valoresTrue = 0;
+
+const contarValTrue = (x) => {
+    for (let i = 0; i < ((arrConTrues.length)); i++) {
+        if (arrConTrues[0] === true) {
+            valoresTrue += 1;
+        }
+    }
+    return valoresTrue;
+}
+
+console.log(contarValTrue(arrConTrues));
+
+console.log("-----------------------------");
+
+/* Ejercicio 05: Escribir una funcion para encontrar el mayor comun divisor de 2 numeros positivos enteros
+Usar recursion */
+
+let maxDiv1 = 0;
+
+const funcMaxDiv = (x) => {
+    for (let i = 1; i < x; i++) {
+        if ( x % i == 0) {
+            maxDiv1 = i;
+        }
+    }    
+    return maxDiv1;
+}
+    
+console.log(funcMaxDiv(15));
+
+/* Preguntar por este For
+
+for (var i = 10; i > 5; i--) {
+    console.log(i);
+}
  */
-// Regresar 0 si el array es vacio
-// usar recurcion
 
-//Ejercicio 05
-// Escribir una funcion para encontrar el mayor comun divisor de 2 numeros positivos enteros
-// Usar recursion
+
 
 /* Escribir una funci[on para encontar el mayor común divisor de dos números positivos enteros */
 
