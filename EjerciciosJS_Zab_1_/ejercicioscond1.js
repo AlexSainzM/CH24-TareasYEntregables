@@ -13,6 +13,10 @@ const funcEsPar = b => {
 
 funcEsPar(3);
 
+console.log("--------------------------------------");
+
+/* Mismo ejercicio que el anterior, pero usando return  */
+
 console.log("-----Ejercicio funcion es par (usando return)-------");
 
 const funcEsPar2 = x => {
@@ -26,6 +30,8 @@ const funcEsPar2 = x => {
 }
 
 console.log(funcEsPar2(3));
+
+console.log("--------------------------------------");
 
 /* Crear un programa para verificar la edad de un usuario, debe ser mayor a 18 para un resultado positivo */
 
@@ -43,26 +49,17 @@ const edadUsuario = (a) => {
 
 console.log(edadUsuario(15));
 
-
-/* reto 03 Hora y calendario */
-
-/* var today = new Date();
+console.log("--------------------------------------");
 
 
+/* Reto 03 - Hora y calendario, revisar instrucciones. */
 
+console.log("------Reto 3 Hora y Calendario---------");
 
-var now = today.toLocaleString();
-console.log(now); */
+/* Este ejercicio no está completo, pero sigo trabajando en el */
 
-/* const today1 = () => {
-    const now = today.toDateString();
-    return now;
-} */
-
-//let diaHabil = new Date().getDay().toLocaleString(); 
-
-let dia = 12;//new Date().getDate().toLocaleString();
-let mes = 12;//new Date().getMonth().toLocaleString();
+let dia = 12; //new Date().getDate().toLocaleString();
+let mes = 12; //new Date().getMonth().toLocaleString();
 
 let feriadodia = [12,24,31];
 let feriadomes = [12,12,12];
@@ -81,14 +78,11 @@ const esLaboral = (diaHabil) => {
             }
         }
     }
-
-
 }
 
+console.log(esLaboral());
 
-//console.log(esLaboral());
-
-
+console.log("--------------------------------------");
 
 /* Escribir una funcion que regrese la cantidad de valores true que hay en un array */
 
@@ -113,6 +107,8 @@ console.log("-----------------------------");
 /* Ejercicio 05: Escribir una funcion para encontrar el mayor comun divisor de 2 numeros positivos enteros
 Usar recursion */
 
+console.log("-----Ejercicio máximo común divisor de dos números-------");
+
 let maxDiv1 = 0;
 
 const funcMaxDiv = (x) => {
@@ -126,29 +122,107 @@ const funcMaxDiv = (x) => {
     
 console.log(funcMaxDiv(15));
 
-/* Preguntar por este For
-
-for (var i = 10; i > 5; i--) {
-    console.log(i);
-}
- */
-
-
-
-/* Escribir una funci[on para encontar el mayor común divisor de dos números positivos enteros */
+console.log("-----------------------------");
 
 /* Encontrar los primeros n elementos de la serie fibbonnacci */
 
+console.log("------Ejercicio Serie Fibonacci---------");
+
+const funcFibonacci = (y) => {
+    let arraySerie = [1,1];
+    let nuevoElemento = 0;
+    for (let i = 1; i < (y - 1); i++){
+        nuevoElemento =  arraySerie[i] + arraySerie[i-1];
+        arraySerie.push(nuevoElemento);
+        console.log(nuevoElemento);
+    }
+    return arraySerie;
+}
+
+console.log(funcFibonacci(3));
+
+console.log("-----------------------------");
+
 /* Encontrar el número n de una figura pidamidal tringula  */
+
 
 /* Crea una función que tome el nombre de un país y su área (nombre, a), debe regresar la proporcion del area del país acorde al area total global disponible */ 
 
 /* Escribir una función que retorne 0 si 1 y viceversa. Sin utilizar condicionales, ternarios, negacionesni operadores bit  */
 
-// Messenger bzzz
+console.log("------Ejercicio Usuarios en Línea  (Messenger)------");
+
+/* // Messenger bzzz
 // (0 ) n
 // Si no hay nadie -> "No hay nadie en linea"
 // Si hay 1 persona -> "user1 esta en linea"
 // Si hay 2 personas -> "user1 y user2 estan en linea"
-// Si hay n>2 personas, "user1 y n-1 mas estan en linea"
+// Si hay n>2 personas, "user1 y n-1 mas estan en linea" */
 
+
+
+/* Ejercicio Oracle, Substring binarios */
+
+console.log("-----SubStrings binarios-------");
+
+function getSubstringCount(s) {
+    s = "0100110011";
+    let arr = s.split('');
+    let current = 1;
+    let previous = 0;
+    let ans = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if (s[i] === s[i-1]) current++;
+        else ans += Math.min(current, previous), previous = current, current = 1;
+        
+
+    }
+    console.log(ans + Math.min(current, previous));
+}
+
+getSubstringCount();
+
+console.log("-------------------------------------------");
+
+/* 
+Ejercicio Oracle, elimina los caracteres duplicados en un array, y debe devolverlos en orden descendente */
+
+console.log("-----Ejercicio carácteres duplicados-------");
+
+function getString() {
+    inputString = "abacaba";
+    let newArr = inputString.split('');
+    console.log(newArr);
+    const filtered = []
+    for(var i = 0; i < newArr.length; i++) {
+ 
+        const elemento = newArr[i];
+       
+        if (!filtered.includes(newArr[i])) {
+          filtered.push(elemento);
+        }
+    console.log(filtered);
+    }
+}
+getString();
+
+console.log("------------------------------------");
+
+/* Preguntar por este ciclo for */
+
+/* for (var i = 10; i > 5; i--) {
+    console.log(i);
+    } 
+*/
+
+/* Ejercicios, (expected output de a)  */
+
+/* 
+let a = 315;
+let  b = 840;
+while (b>0){
+    a %= b;
+    swap (a,b);
+}
+console.log(a);
+ */

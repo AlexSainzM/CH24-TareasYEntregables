@@ -12,6 +12,7 @@
 // nuvDiv(10) -> [5, 5];
 // numDiv(100) -> [50,50];
 
+console.log(" ------ Ejercicio número dividido en mitades -----------");
 
 const numDiv = (x) => {
     x = x / 2;
@@ -20,12 +21,16 @@ const numDiv = (x) => {
 }
 numDiv(10);
 
+console.log("-------------------------------------------");
+
 // Encontrar la suma de todos los resistores conectados en serie
 // sumResistance([1, 5, 6, 3]) -> "15 ohms"
 // sumResitance([14,3.5,6]) -> "25.5 ohms"
 // Ohms >= 1
 
-/* const sumResistance = (resistencias) => {
+console.log(" ------ Suma de resistores en serie -----------");
+
+const sumResistance = (resistencias) => {
     let sumaRes = 0;
     for (let i = 0; i >= (resistencias.lenght); i++) {
         sumaRes + resistencias[i];
@@ -34,7 +39,7 @@ numDiv(10);
 }
 
 console.log(sumResistance(5,4,3,5));
-console.log(resistencias.lenght); */
+console.log(resistencias.lenght);
 
 /* const sumResistance = (resistencias) => {
     console.log(resistencias.lenght);
@@ -42,11 +47,11 @@ console.log(resistencias.lenght); */
 
 sumResistance([5,4,3,5]); */
 
-console.log("-----------");
-console.log(" Ejercicio Sociedad Secreta ");
+console.log("-------------------------------------------");
 
 
-// Encontrar el nombre de una sociedad secreta segun los datos de los nombres para cada integrante.
+
+/* Encontrar el nombre de una sociedad secreta segun los datos de los nombres para cada integrante. */
 
 /* 
 
@@ -58,6 +63,8 @@ console.log(" Ejercicio Sociedad Secreta ");
 
 */
 
+console.log(" -------- Ejercicio Sociedad Secreta ---------------");
+
 const names = ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'];
 const newNameArr = [];
 
@@ -68,10 +75,10 @@ names.forEach((elemento) => {
 
 console.log(newNameArr.toString().toUpperCase().replace(/,/g, ""));
 
-
-/* const secretName = names.map(elemento => {
-    
+/* const secretName = names.map(elemento => {  
 }); */
+
+console.log("---------------------------------------");
 
 
 // onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']) -> 'mockIng99, J0eyPunch and one 1 more online'
@@ -96,9 +103,12 @@ console.log(newNameArr.toString().toUpperCase().replace(/,/g, ""));
 // - Dividir cada numero del array final entre 2  -> [3.5, 12, 4]
 
 /* Mostrar la tabla del 5 */
-for (let i = 0; i < 5; i++) {
+
+
+/* for (let i = 0; i < 5; i++) {
     console.log('5 x ${i}');
 }
 
 let i = 0;
-let text = "5 x ${i}";
+let text = "5 x ${i}"; */
+
