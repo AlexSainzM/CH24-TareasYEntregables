@@ -6,6 +6,13 @@
 // Encontrar el numero mas grande y el mas pequeño
 // -> [10, -9];
 
+console.log(" ------ Número mas grande y el más pequeño -----------");
+
+
+
+
+
+console.log("-------------------------------------------");
 
 // Dado un numero, regresar el mismo numero divido en sus mitades dentro de un array
 // numDiv(4) -> [2, 2];
@@ -38,8 +45,11 @@ const sumResistance = (resistencias) => {
     return sumaRes;
 }
 
+/* 
 console.log(sumResistance(5,4,3,5));
 console.log(resistencias.lenght);
+ */
+
 
 /* const sumResistance = (resistencias) => {
     console.log(resistencias.lenght);
