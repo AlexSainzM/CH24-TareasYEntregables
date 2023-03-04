@@ -8,11 +8,31 @@
 
 console.log(" ------ Número mas grande y el más pequeño -----------");
 
+const arrNumero = [1, -563, 999, 0 , -1, -999];
 
+function numeros () {
+    const newArrNumero = [(Math.max(...arrNumero)), (Math.min(...arrNumero))];
+    console.log(newArrNumero);
+}
 
-
+numeros();
 
 console.log("-------------------------------------------");
+
+console.log(" ------ Número mas grande y el más pequeño (ejemplo2) -----------");
+
+//Esta funcion tambien toma a la constante arrNumero del ejemplo anterios como parametro. 
+
+
+const numeros2 = (x) => {
+    const newArrNumero = [(Math.max(x)), (Math.min(x))];
+    console.log(newArrNumero);
+}
+
+numeros(...arrNumero);
+
+console.log("-------------------------------------------");
+
 
 // Dado un numero, regresar el mismo numero divido en sus mitades dentro de un array
 // numDiv(4) -> [2, 2];
