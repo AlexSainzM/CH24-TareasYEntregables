@@ -57,28 +57,21 @@ console.log("-------------------------------------------");
 
 console.log(" ------ Suma de resistores en serie -----------");
 
-const sumResistance = (resistencias) => {
-    let sumaRes = 0;
-    for (let i = 0; i >= (resistencias.lenght); i++) {
-        sumaRes + resistencias[i];
+const resistances = [1, 5, 6, 3];
+let sumaRes = 0;
+
+function sumResistance() {
+    
+    for (let i = 0; i < (resistances.length); i++) {
+        sumaRes = sumaRes + (resistances[i]);
+        //console.log(resistances[i]);
     }
-    return sumaRes;
+    console.log(sumaRes);
 }
 
-/* 
-console.log(sumResistance(5,4,3,5));
-console.log(resistencias.lenght);
- */
+sumResistance(...resistances);
 
-
-/* const sumResistance = (resistencias) => {
-    console.log(resistencias.lenght);
-}
-
-sumResistance([5,4,3,5]); */
-
-console.log("-------------------------------------------");
-
+("-------------------------------------------");
 
 
 /* Encontrar el nombre de una sociedad secreta segun los datos de los nombres para cada integrante. */
@@ -93,7 +86,10 @@ console.log("-------------------------------------------");
 
 */
 
+
 console.log(" -------- Ejercicio Sociedad Secreta ---------------");
+
+//Este ejercicio esta pendiente de probar con .map
 
 const names = ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'];
 const newNameArr = [];
@@ -105,8 +101,7 @@ names.forEach((elemento) => {
 
 console.log(newNameArr.toString().toUpperCase().replace(/,/g, ""));
 
-/* const secretName = names.map(elemento => {  
-}); */
+
 
 console.log("---------------------------------------");
 
@@ -119,11 +114,83 @@ console.log("---------------------------------------");
 // arrayMultiplos(17, 6) -> [17, 34, 51, 68, 85, 102]
 
 
+console.log(" -------- Funcion Multiplos ---------------");
+
+//Función pendiente de ser reparada.
+
+/* 
+const funcMultiplos = (x, y) => {
+    let newArrMultiplos = [];
+    let contadorMultiplos = 0;
+    let contadorStop = 10000000;
+    for (let i = 0; contadorStop > 0 ; i++) {
+
+        if (i%x == 0) {
+            
+            newArrMultiplos.push(i);
+            contadorMultiplos =+ 1;
+            if (contadorMultiplos == y) {
+                contadorStop = 0;
+            }
+            //newNameArr.push(elemento.toString().slice(0,1)); 
+            //console.log(newArrMultiplos);
+            
+        }
+    }
+    console.log(newArrMultiplos);
+}
+ */
+
+function funcMultiplos (x, y) {
+    let semaforo = 0;
+    let i = 0;
+    let newArrMultiplos = [];
+    do {
+        if (i%x == 0) {
+            newArrMultiplos.push(i);
+            i = i + 1 ;
+            if (i == y){
+                semaforo = 1;
+            }
+        }
+    } 
+    while (semaforo =! 0);
+    console.log(newArrMultiplos);
+}
+
+funcMultiplos(2,10);
+
+console.log(" -------------------------------------------");
+
 // Escrbir una funcion que descubra si el array es dominante positivo
 // Un array es positivo dominante cuando la mayoria de sus elementos son positivos -> [1, -2, 55, 10]
 // positiveDom([-1, -3, -5, 4, 6767]) -> false
 
+console.log("---------Dominante positivo  (true/false)-----------");
 
+
+//Dado el array, devuelve true si es dominante positivo y false si es dominante negativo.
+const arrDom = [-1, -3, -5, 4, 6767];
+
+function posOrNegDom () {
+    let posDom = 0;
+    let negDom = 0;
+    let posOrNeg;
+    arrDom.forEach((elemento) => {
+               
+        if (elemento > 0){
+            posDom =+ 1;
+        } else { negDom =+ 1; }
+    });
+    if (posDom > negDom) {
+        posOrNeg = true;
+    } else { posOrNeg = false }
+    return posOrNeg;
+}
+
+console.log(posOrNegDom());
+
+console.log(" -------------------------------------------");
 
 // Promedio antipode
 // Dado un array, devolver un array de menor longitud de acuerdo a los siguentes pasos:
@@ -132,13 +199,9 @@ console.log("---------------------------------------");
 // [1,2,3] [5,22,6] -> 1 + 6, 2 + 22, 3 + 5 -> [7, 24, 8]
 // - Dividir cada numero del array final entre 2  -> [3.5, 12, 4]
 
-/* Mostrar la tabla del 5 */
 
 
-/* for (let i = 0; i < 5; i++) {
-    console.log('5 x ${i}');
-}
 
-let i = 0;
-let text = "5 x ${i}"; */
+
+
 

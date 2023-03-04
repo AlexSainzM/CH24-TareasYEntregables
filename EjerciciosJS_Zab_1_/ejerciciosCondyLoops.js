@@ -206,7 +206,21 @@ function getString() {
 }
 getString();
 
-console.log("------------------------------------");
+
+
+/* Mostrar la tabla del 5 */
+
+console.log("-------- Mostrar la tabla del 5----------");
+
+const funcTablaMulti = (x) => {
+    for (let i = 0; i < 10; i++){
+        console.log(`${x} x ${i} = ${x*i}`);
+    }
+}
+
+funcTablaMulti(5);
+
+console.log("------------------------------------------------------");
 
 /* Preguntar por este ciclo for */
 
